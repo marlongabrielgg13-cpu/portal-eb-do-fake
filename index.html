@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141914">
+  <meta name="description" content="Portal de inscrições do EB do Fake.">
+  <title>Portal EB do Fake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Portal EB do Fake">
+      <div class="brand-mark">EB</div>
+      <div><strong>EB DO FAKE</strong><span>PORTAL DE INSCRIÇÕES</span></div>
+    </a>
+    <div class="top-actions">
+      <span class="secure"><i></i> AMBIENTE PROTEGIDO</span>
+      <button id="loginBtn" class="btn btn-outline">ENTRAR COM ROBLOX</button>
+      <button id="logoutBtn" class="btn btn-outline hidden">SAIR</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> EXÉRCITO BRASILEIRO • EB DO FAKE</div>
+        <h1>SERVIR É UMA<br><em>HONRA.</em></h1>
+        <p>Faça sua inscrição, demonstre seu compromisso e encontre seu lugar em nossas fileiras.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-gold" href="#inscricoes">VER INSCRIÇÕES <b>↘</b></a>
+          <a class="text-link" href="#como-funciona">COMO FUNCIONA</a>
+        </div>
+        <div class="hero-note"><span class="shield">✦</span> Acesso exclusivo para integrantes do grupo Roblox EB do Fake.</div>
+      </div>
+      <div class="hero-art" aria-label="Brasão decorativo">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="crest"><div class="crest-star">✦</div><div class="crest-title">EB</div><div class="crest-line"></div><div class="crest-sub">HONRA • LEALDADE • SERVIÇO</div></div>
+        <div class="art-label">PORTAL OFICIAL <span>◆</span> 2026</div>
+      </div>
+    </section>
+
+    <section class="section" id="inscricoes">
+      <div class="section-heading"><div><div class="eyebrow">OPORTUNIDADES</div><h2>ESCOLHA SUA <em>JORNADA.</em></h2></div><p>Selecione a modalidade que corresponde ao seu objetivo.</p></div>
+      <div class="cards">
+        <article class="choice-card">
+          <div class="card-number">01 / INGRESSO</div><div class="card-icon">✧</div>
+          <h3>ALISTAMENTO</h3><p>Para quem deseja ingressar no Exército e iniciar sua trajetória militar.</p>
+          <button class="card-action" data-type="alistamento">INICIAR INSCRIÇÃO <span>↗</span></button>
+        </article>
+        <article class="choice-card featured">
+          <div class="card-number">02 / LIDERANÇA</div><div class="card-icon">♜</div>
+          <h3>SELEÇÃO DE OFICIAIS</h3><p>Para candidatos interessados em assumir responsabilidades de liderança.</p>
+          <button class="card-action" data-type="oficiais">INICIAR INSCRIÇÃO <span>↗</span></button>
+        </article>
+        <article class="choice-card">
+          <div class="card-number">03 / ESPECIALIZAÇÃO</div><div class="card-icon">⬡</div>
+          <h3>TROPAS ESPECIAIS</h3><p>Para candidatos que desejam participar de uma unidade especializada.</p>
+          <button class="card-action" data-type="tropas-especiais">INICIAR INSCRIÇÃO <span>↗</span></button>
+        </article>
+      </div>
+      <div class="access-note"><span>⌑</span><div><strong>ACESSO VERIFICADO PELO ROBLOX</strong><small>O portal confirma sua identidade e sua participação no grupo antes de liberar os formulários.</small></div></div>
+    </section>
+
+    <section class="how" id="como-funciona">
+      <div class="eyebrow">PROCESSO DE SELEÇÃO</div><h2>TRÊS ETAPAS. <em>UM OBJETIVO.</em></h2>
+      <div class="steps"><div><b>01</b><strong>ENTRE COM ROBLOX</strong><p>Autentique sua conta pelo sistema oficial do Roblox.</p></div><div><b>02</b><strong>ENVIE SUA INSCRIÇÃO</strong><p>Responda às perguntas da modalidade escolhida.</p></div><div><b>03</b><strong>AGUARDE A ANÁLISE</strong><p>A administração avaliará sua inscrição.</p></div></div>
+    </section>
+
+    <section id="application" class="application hidden">
+      <div class="section-heading"><div><div class="eyebrow">FORMULÁRIO DE CANDIDATURA</div><h2>SUA <em>INSCRIÇÃO.</em></h2></div><button id="closeForm" class="btn btn-outline">FECHAR ×</button></div>
+      <form id="applicationForm" class="form-panel">
+        <div class="form-intro"><span id="formTag">MODALIDADE</span><h3 id="formTitle">ALISTAMENTO</h3><p>Preencha com atenção. Suas respostas serão encaminhadas para análise da administração.</p></div>
+        <label>IDADE<input name="age" required maxlength="3" inputmode="numeric" placeholder="Sua idade"></label>
+        <label id="unitWrap" class="hidden">UNIDADE DE INTERESSE<select name="unit"><option value="">Selecione uma unidade</option><option>BAC — Batalhão de Ações de Comandos</option><option>BPE — Batalhão de Polícia do Exército</option><option>BFE — Batalhão de Forças Especiais</option><option>CIE — Centro de Inteligência do Exército</option><option>Outra / Ainda não definida</option></select></label>
+        <label>POR QUE VOCÊ DESEJA PARTICIPAR?<textarea name="reason" required minlength="10" maxlength="1200" rows="4" placeholder="Explique suas motivações..."></textarea></label>
+        <label>VOCÊ POSSUI EXPERIÊNCIA? (OPCIONAL)<textarea name="experience" maxlength="1200" rows="3" placeholder="Conte sobre experiências anteriores..."></textarea></label>
+        <label>QUAL É SUA DISPONIBILIDADE?<input name="availability" required maxlength="300" placeholder="Ex.: noites e finais de semana"></label>
+        <button class="btn btn-gold submit-btn" type="submit">ENVIAR INSCRIÇÃO <b>↗</b></button>
+        <p id="formMessage" class="message" role="status"></p>
+      </form>
+    </section>
+
+    <section id="account" class="account hidden">
+      <div class="section-heading"><div><div class="eyebrow">ÁREA DO CANDIDATO</div><h2>MINHAS <em>INSCRIÇÕES.</em></h2></div><span id="userName" class="user-pill"></span></div>
+      <div id="myApplications" class="application-list"></div>
+    </section>
+
+    <section id="admin" class="admin hidden">
+      <div class="section-heading"><div><div class="eyebrow">ACESSO RESTRITO</div><h2>PAINEL <em>ADMINISTRATIVO.</em></h2></div><span class="admin-pill">ADMINISTRADOR</span></div>
+      <div class="admin-toolbar"><select id="statusFilter"><option value="">Todas as inscrições</option><option>Pendente</option><option>Aprovado</option><option>Reprovado</option></select><button id="refreshAdmin" class="btn btn-outline">ATUALIZAR ↻</button></div>
+      <div id="adminApplications" class="application-list"></div>
+    </section>
+  </main>
+
+  <footer><div class="brand"><div class="brand-mark">EB</div><div><strong>EB DO FAKE</strong><span>PORTAL DE INSCRIÇÕES</span></div></div><p>HONRA • LEALDADE • SERVIÇO</p><small>Este é um portal comunitário independente, não afiliado à Roblox Corporation.</small></footer>
+  <div id="toast" class="toast" role="status"></div>
+</body>
+</html>
